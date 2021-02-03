@@ -29,6 +29,9 @@ to run the program write down:
 - Array
 	- One Dimensional Array
 		- Search, Insert and Delete in an unsorted array
+		- Insert, Search and Delete operations in a Sorted Array
 
 ## Contributing
 Keep contributing your idea or programs to this project.
+
+<p align="center">😊</p>
