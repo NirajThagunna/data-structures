@@ -53,7 +53,7 @@ class UnsortedArrayOperation {
 			System.out.println(key + " is not present in a given array.\n");
 		}
 		else {
-			System.out.printf("%d is present at position %d.\n\n", key, result);
+			System.out.printf("%d is present at position %d.\n\n", key, result + 1);
 		}
 	}
 
