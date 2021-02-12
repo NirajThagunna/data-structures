@@ -1,0 +1,8 @@
+Multidimensional arrays are arrays of arrays with each element of the array holding the reference of other array. 
+These are also known as Jagged Arrays.
+
+Multidimensional Arrays can be defined in simple words as array of arrays. 
+Data in multidimensional arrays are stored in tabular form (in row major order).
+
+Three – dimensional array is a complex form of a multidimensional array. A three – dimensional array can be seen as an array
+of two – dimensional array for easier understanding.
