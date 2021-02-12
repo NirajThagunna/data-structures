@@ -34,6 +34,12 @@ to run the program write down:
 			- Iterative Way
 			- Recursive Method
 
+	- Two Dimensional Array
+		- Traversing
+		- Updation
+
+	- Multi-dimensional Array (Traversing)
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
