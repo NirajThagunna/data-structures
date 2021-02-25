@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to reverse a linked list Recursively
+public class ReverseListRecursive {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 			return;
 		}
 
-		System.out.println("\nNodes of singly linked list : ");
+//		System.out.println("\nNodes of singly linked list : ");
 		while (current != null) {
 			// Printing each node by incrementing pointer
 			System.out.print(current.data + " ");
@@ -82,17 +82,44 @@ public class SinglyLinkedList {
 
 		System.out.println();
 	}
+	
+	// function to reverse a linked list Recursively - divide and conquer technique is used
+	public void reverse(Node node) { // Node node = head
+		
+		// Checks if the list is empty or not
+		if (head == null) {
+			System.out.println("\nList is empty!");
+			return;
+		}
+		else {
+			// if there is only one node is present, then print that node
+			if (node.next == null) {
+				System.out.print(node.data + " ");
+				return;
+			}
+			
+			// it will also called else block
+			// call the reverse() function recursively
+			reverse(node.next); // call the reverse() function for next node -> it will take pointer or reference
+			System.out.print(node.data + " ");
+		}
+	}
 
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
+			ReverseListRecursive sList = new ReverseListRecursive();
 
 			// Adding new nodes to the linked list
 			sList.addNode();
 
 			// Displays the nodes present in the list
+			System.out.println("\nNodes of singly linked list are : ");
 			sList.display();
+
+			// reverse a linked list
+			System.out.println("\nNodes of the singly linked list after reversing : ");
+			sList.reverse(sList.head);
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +130,8 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+// Space Complexity : O(1)
+
+

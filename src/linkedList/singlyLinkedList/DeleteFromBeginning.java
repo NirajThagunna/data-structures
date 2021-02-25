@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to delete a node from beginning
+public class DeleteFromBeginning {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 			return;
 		}
 
-		System.out.println("\nNodes of singly linked list : ");
+//		System.out.println("\nNodes of singly linked list : ");
 		while (current != null) {
 			// Printing each node by incrementing pointer
 			System.out.print(current.data + " ");
@@ -82,17 +82,67 @@ public class SinglyLinkedList {
 
 		System.out.println();
 	}
+	
+	// length of the linked list
+	public int getLength() {
+		
+		int count = 0;
+		Node temp = head;
+		
+		if (temp == null) {
+			return 0;
+		}
+		else {
+			while (temp != null) {
+				count++;
+				temp = temp.next;
+			}
+		}
+		
+		return count;
+	}
 
+	// Function to delete a node from the beginning of a linked list
+	public void deleteAtBeg() {
+		
+		// Checks if the list is empty or not
+		if (head == null) {
+			System.out.println("\nList is empty!");
+			return;
+		}
+		else {
+			// store the head pointer in some temp variable
+			Node temp = head; // storing the head node in temp variable
+			head = temp.next; // now head will points the second node by temp.next
+			temp.next = null; // free up the space -> distroy the link between temp node with second node by temp.next = null
+		}
+	}
+	
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
-
-			// Adding new nodes to the linked list
+			DeleteFromBeginning sList = new DeleteFromBeginning();
+			
+			// Adding nodes
 			sList.addNode();
-
-			// Displays the nodes present in the list
+			
+			// display all the nodes
+			System.out.println("\nNodes of linked list before deletion : ");
 			sList.display();
+			
+			// length
+			int length;
+			length = sList.getLength();
+			System.out.println("Length of linked list before deletion : " + length);
+			
+			// deleting a node from beginning
+			sList.deleteAtBeg();
+			System.out.println("\nNodes of linked list after deletion : ");
+			sList.display();
+			
+			// length
+			length = sList.getLength();
+			System.out.println("Length of linked list after deletion : " + length);
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +153,6 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(1)
+

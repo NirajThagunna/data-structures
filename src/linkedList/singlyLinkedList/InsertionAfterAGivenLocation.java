@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Java Program to insert a node after a given location - O(n)
+public class InsertionAfterAGivenLocation {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 			return;
 		}
 
-		System.out.println("\nNodes of singly linked list : ");
+		//		System.out.println("\nNodes of singly linked list : ");
 		while (current != null) {
 			// Printing each node by incrementing pointer
 			System.out.print(current.data + " ");
@@ -83,16 +83,80 @@ public class SinglyLinkedList {
 		System.out.println();
 	}
 
+	// length Iteratively
+	public int getLength() {
+
+		int count = 0;
+		Node temp = head;
+
+		if (temp == null) {
+			return 0;
+		}
+		else {
+			while (temp != null) {
+				count++;
+				temp = temp.next;
+			}
+		}
+
+		return count;
+	}
+
+	// Inserting a node after a given location
+	public void insert(int length) {
+
+		System.out.print("\nEnter the position : ");
+		int pos = UserIO.readInt();
+
+		if (pos > length) {
+			System.out.println("\nPlease enter the valid position!");
+			return;
+		}
+		else {
+			Node temp = head;
+
+			// It will find the position of a node after which you want to insert a node
+			for (int i = 0; i < pos - 1; i++) {
+				temp = temp.next;
+			}
+
+			System.out.print("\nEnter the element you want to insert : ");
+			int data = UserIO.readInt();
+
+			// Creating a new node
+			Node newNode = new Node(data);
+
+			// inserting a new node after a given position
+			newNode.next = temp.next; // link between the new node and a node after the given position node
+			temp.next = newNode; // link between the given position node and newNode
+		}
+	}
+
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
+			InsertionAfterAGivenLocation sList = new InsertionAfterAGivenLocation();
 
 			// Adding new nodes to the linked list
 			sList.addNode();
 
 			// Displays the nodes present in the list
+			System.out.println("\nNodes of singly linked list are : ");
 			sList.display();
+
+			// length
+			int length;
+			length = sList.getLength();
+			System.out.println("\nLength of linked list before inserting a node : " + length);
+
+			// inserting a new node after a given location
+			sList.insert(length);
+			System.out.println("\nNodes of a linked list after insertion : ");
+			sList.display();
+
+			// length
+			length = sList.getLength();
+			System.out.println("\nLength of linked list after inserting a node : " + length);
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +167,7 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+
+

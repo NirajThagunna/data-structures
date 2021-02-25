@@ -3,7 +3,6 @@ package array.one_dimensional_array;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import basicIO.ArrayIO;
 import basicIO.UserIO;
 
 class SearchInsertDeleteOperations {

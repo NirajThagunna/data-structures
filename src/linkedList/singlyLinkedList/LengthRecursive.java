@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to find the length of a singly linked list by Recursively - O(n)
+public class LengthRecursive {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -56,7 +56,7 @@ public class SinglyLinkedList {
 			}
 			System.out.println(data + " is added successfully!");
 
-			System.out.print("Do you want to add new node(1 - Yes/Add 0 - No/Exit) : ");
+			System.out.print("Do you want to add new node(1 - Yes/Add/ 0 - No/Exit) : ");
 			choice = UserIO.readInt();
 		}
 	}
@@ -82,17 +82,32 @@ public class SinglyLinkedList {
 
 		System.out.println();
 	}
+	
+	// finding the length of a linked list by recursively - O(n)
+	public int getLength(Node node) { // Node node = head
+		
+		if (node == null) {
+			return 0;
+		}
+		else {
+			return (1 + getLength(node.next));
+		}
+	}
 
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
-
+			LengthRecursive sList = new LengthRecursive();
+			
 			// Adding new nodes to the linked list
 			sList.addNode();
-
+			
 			// Displays the nodes present in the list
 			sList.display();
+			
+			// length
+			int length = sList.getLength(sList.head);
+			System.out.println("\nThe length of linked list is : " + length);
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +118,7 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+
+

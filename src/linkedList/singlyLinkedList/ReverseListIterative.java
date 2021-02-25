@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to reverse a linked list Iteratively
+public class ReverseListIterative {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 			return;
 		}
 
-		System.out.println("\nNodes of singly linked list : ");
+//		System.out.println("\nNodes of singly linked list : ");
 		while (current != null) {
 			// Printing each node by incrementing pointer
 			System.out.print(current.data + " ");
@@ -82,16 +82,45 @@ public class SinglyLinkedList {
 
 		System.out.println();
 	}
+	
+	// function to reverse a linked list Iteratively
+	public void reverse() {
+		
+		if (head == null) {
+			System.out.println("\nList is empty!");
+			return;
+		}
+		else {
+			Node prevNode, currentNode, nextNode;
+			prevNode = null; // initially there are no any node before the start or initial node so, prevNode = null
+			currentNode = nextNode = head; // currentNode and nextNode will point to first node
+			
+			while (nextNode != null) { // loop till the last node or end
+				nextNode = nextNode.next; // before destroy the link make a path to traverse new node
+				currentNode.next = prevNode; // in current node store the pointer or reference of prevNode
+				prevNode = currentNode; // increment prevNode pointer
+				currentNode = nextNode; // increment currentNode pointer one node ahead
+			}
+			
+			head = prevNode; // change the head pointer to point to the last node
+		}
+	}
 
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
+			ReverseListIterative sList = new ReverseListIterative();
 
 			// Adding new nodes to the linked list
 			sList.addNode();
 
 			// Displays the nodes present in the list
+			System.out.println("\nNodes of singly linked list : ");
+			sList.display();
+			
+			// reverse a linked list
+			sList.reverse();
+			System.out.println("\nNodes of the linked list after reversing : ");
 			sList.display();
 		}
 		catch (Exception ex) {
@@ -103,3 +132,7 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+// Space Complexity : O(1)
+

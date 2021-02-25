@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to delete a node from a specified position
+public class DeleteFromSpecifiedPosition {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -73,7 +73,7 @@ public class SinglyLinkedList {
 			return;
 		}
 
-		System.out.println("\nNodes of singly linked list : ");
+//		System.out.println("\nNodes of singly linked list : ");
 		while (current != null) {
 			// Printing each node by incrementing pointer
 			System.out.print(current.data + " ");
@@ -83,16 +83,75 @@ public class SinglyLinkedList {
 		System.out.println();
 	}
 
+	// length of the linked list
+	public int getLength() {
+
+		int count = 0;
+
+		if (head == null) {
+			return 0;
+		}
+		else {
+			Node temp = head;
+			while (temp != null) {
+				count++;
+				temp = temp.next;
+			}
+		}
+
+		return count;
+	}
+	
+	// function to delete a node from a specified position
+	public void deleteFromSpecifiedPos(int length) {
+		
+		System.out.print("\nEnter the position of a node which you want to delete : ");
+		int pos = UserIO.readInt();
+		
+		if (pos > length) {
+			System.out.println("\nPlease enter the valid position!");
+			return;
+		}
+		else {
+			Node prevNode, temp; // prevNode = node before the node to be delete, temp = node to be delete
+			prevNode = null; // there is nothing is stored in prevNode
+			temp = head;
+			
+			for (int i = 1; i < pos; i++) {
+				prevNode = temp; // previous node to the node to be delete
+				temp = temp.next; // node to be delete
+			}
+			
+			prevNode.next = temp.next; // unlink the prevNode with temp node
+			temp.next = null; // free of space or node || unlink between temp node with node after temp node
+		}
+	}
+
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
+			DeleteFromSpecifiedPosition sList = new DeleteFromSpecifiedPosition();
 
-			// Adding new nodes to the linked list
+			// Adding nodes
 			sList.addNode();
 
-			// Displays the nodes present in the list
+			// display all the nodes
+			System.out.println("\nNodes of linked list before deletion : ");
 			sList.display();
+
+			// length
+			int length;
+			length = sList.getLength();
+			System.out.println("Length of linked list before deletion : " + length);
+
+			// deleting a node from a specified position
+			sList.deleteFromSpecifiedPos(length);
+			System.out.println("\nNodes of linked list after deletion : ");
+			sList.display();
+
+			// length
+			length = sList.getLength();
+			System.out.println("Length of linked list after deletion : " + length);
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +162,7 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+
+

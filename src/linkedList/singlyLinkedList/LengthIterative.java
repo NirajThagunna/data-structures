@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Create and display a singly linked list
-public class SinglyLinkedList {
+// Program to find the length of a singly linked list Iteratively - O(n)
+public class LengthIterative {
 
 	// Representing a node of the singly linked list
 	// Node - User-defined data type
@@ -82,17 +82,34 @@ public class SinglyLinkedList {
 
 		System.out.println();
 	}
+	
+	// to find the length of a singly linked list Iteratively - O(n)
+	public void getLength() {
+		
+		int count = 0;
+		Node temp = head;
+		
+		while (temp != null) {
+			count++;
+			temp = temp.next;
+		}
+		
+		System.out.println("\nThe length of a linked list is : " + count);
+	}
 
 	// Main||Driver method
 	public static void main(String[] args) {
 		try {
-			SinglyLinkedList sList = new SinglyLinkedList();
-
+			LengthIterative sList = new LengthIterative();
+			
 			// Adding new nodes to the linked list
 			sList.addNode();
-
+			
 			// Displays the nodes present in the list
 			sList.display();
+			
+			// length
+			sList.getLength();
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -103,3 +120,6 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity : O(n)
+
