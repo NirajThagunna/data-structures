@@ -40,6 +40,24 @@ to run the program write down:
 
 	- Multi-dimensional Array (Traversing)
 
+- Linked List
+	- Singly Linked List
+		- Create, display and traverse
+		- Insertion
+			- At beginning
+			- At end
+			- After a specified position
+		- Deletion
+			- At beginning
+			- At end
+			- From a specified position
+		- Length
+			- Iterative
+			- Recursive
+		- Reverse
+			- Iterative
+			- Recursive
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
