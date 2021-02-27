@@ -57,6 +57,21 @@ to run the program write down:
 		- Reverse
 			- Iterative
 			- Recursive
+	- Circular Linked List
+		- Create, display and traverse by using head and tail pointer
+		- Create, display and traverse by using only tail pointer
+		- Insertion
+			- At beginning
+			- At end
+			- After a specified position
+		- Deletion
+			- At beginning
+			- At end
+			- From a specified position
+		- Length
+			- Iterative
+		- Reverse
+			- Iterative
 
 ## Contributing
 Keep contributing your idea or programs to this project.
