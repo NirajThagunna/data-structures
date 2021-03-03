@@ -27,6 +27,7 @@ to run the program write down:
 ## Data Structures
 
 - Array
+
 	- One Dimensional Array
 		- Search, Insert and Delete in an unsorted array
 		- Insert, Search and Delete operations in a Sorted Array
@@ -41,6 +42,7 @@ to run the program write down:
 	- Multi-dimensional Array (Traversing)
 
 - Linked List
+
 	- Singly Linked List
 		- Create, display and traverse
 		- Insertion
@@ -57,6 +59,7 @@ to run the program write down:
 		- Reverse
 			- Iterative
 			- Recursive
+
 	- Circular Linked List
 		- Create, display and traverse by using head and tail pointer
 		- Create, display and traverse by using only tail pointer
@@ -67,6 +70,35 @@ to run the program write down:
 		- Deletion
 			- At beginning
 			- At end
+			- From a specified position
+		- Length
+			- Iterative
+		- Reverse
+			- Iterative
+
+	- Doubly Linked List
+		- Create, display and traverse the doubly linked list
+		- Insertion
+			- At beginning
+			- At end
+			- At specified position
+		- Deletion
+			- From beginning
+			- From end
+			- From a specified position
+		- Length
+			- Iterative
+		- Reverse
+			- Iterative
+		- Traverse the list from tail - in backward direction
+
+	- Doubly Circular Linked List
+		- Create, display and traverse the doubly circular linked list
+		- Insertion
+			- At end
+			- At specified position
+		- Deletion
+			- From beginning
 			- From a specified position
 		- Length
 			- Iterative

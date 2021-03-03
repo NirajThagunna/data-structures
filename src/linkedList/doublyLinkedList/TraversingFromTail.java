@@ -5,8 +5,8 @@ import java.io.StringWriter;
 
 import basicIO.UserIO;
 
-// Program to insert a new node at specified position
-public class InsertionAtGivenPos {
+// Program to traverse from the tail of a linked list
+public class TraversingFromTail {
 
 	// Structure of a Node
 	class Node {
@@ -70,59 +70,18 @@ public class InsertionAtGivenPos {
 		}
 	}
 
-	// finding the length of a doubly linked list
-	public int getLength() {
-		
-		int count = 0;
-		
+	// Traversing
+	public void traverse() {
 		if (head == null) {
-			return 0;
-		}
-		else {
-			Node temp = head;
-			
-			while (temp != null) {
-				count++;
-				temp = temp.next;
-			}
-		}
-		
-		return count;
-	}
-	
-	// Inserting a new node at a given position
-	public void insert(int length) {
-
-		System.out.print("\nEnter the position : ");
-		int pos = UserIO.readInt();
-		
-		if (pos > length) {
-			System.out.println("\nPlease enter the valid position!");
+			System.out.println("\nList is empty!");
 			return;
 		}
 		else {
-			// Checks if the list is empty
-			if (head == null) {
-				System.out.println("\nList is empty!");
-				return;
-			}
-			else {
-				System.out.print("\nEnter the element to be insert : ");
-				int data = UserIO.readInt();
+			Node temp = tail;
 
-				Node newNode = new Node(data);
-
-				// Inserting a new node
-				Node temp = head;
-				
-				for (int i = 1; i < pos; i++) {
-					temp = temp.next;
-				}
-				
-				temp.prev.next = newNode;
-				newNode.prev = temp.prev;
-				newNode.next = temp;
-				temp.prev = newNode;
+			while (temp != null) {
+				System.out.print(temp.data + " ");
+				temp = temp.prev;
 			}
 		}
 	}
@@ -130,30 +89,18 @@ public class InsertionAtGivenPos {
 	// Main || Driver method
 	public static void main(String[] args) {
 		try {
-			InsertionAtGivenPos dList = new InsertionAtGivenPos();
+			TraversingFromTail dList = new TraversingFromTail();
 
 			// Adding the nodes
 			dList.create();
 
 			// Display
-			System.out.println("\nNodes of the Doubly Linked List before insertion : ");
+			System.out.println("\nNodes of the Doubly Linked List : ");
 			dList.display();
 
-			// Length
-			int length;
-			length = dList.getLength();
-			System.out.println("\nLength before insertion : " + length);
-			
-			// push() - insert
-			dList.insert(length);
-
-			// After Insertion
-			System.out.println("\nNodes of the Doubly Linked List after insertion : ");
-			dList.display();
-			
-			// Length
-			length = dList.getLength();
-			System.out.println("\nLength after insertion : " + length);
+			// reverse
+			System.out.println("\n\nTraversed the doubly linked list from tail : ");
+			dList.traverse();
 		}
 		catch (Exception ex) {
 			StringWriter sw = new StringWriter();
@@ -165,8 +112,7 @@ public class InsertionAtGivenPos {
 	}
 }
 
-// Time Complexity of insert() : O(n)
-
+// Time Complexity : O(n)
 
 
 
