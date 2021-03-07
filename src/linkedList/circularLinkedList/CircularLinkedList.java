@@ -94,7 +94,7 @@ public class CircularLinkedList {
 }
 
 // Time Complexities : 
-// 		-> Creation - O(n)
+// 		-> Creation - O(1)
 //      -> Display - O(n)
 // Space Complexity : O(1)
 

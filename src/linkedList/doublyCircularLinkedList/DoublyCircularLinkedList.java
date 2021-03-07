@@ -97,7 +97,7 @@ public class DoublyCircularLinkedList {
 	}
 }
 
-// Time Complexity of create() : O(n)
+// Time Complexity of create() : O(1)
 // Time Complexity of print() : O(n)
 
 

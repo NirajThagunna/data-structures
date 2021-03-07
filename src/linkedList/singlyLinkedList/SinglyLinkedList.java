@@ -103,3 +103,8 @@ public class SinglyLinkedList {
 		}
 	}
 }
+
+// Time Complexity for Creation() : O(1)
+
+
+
