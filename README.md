@@ -105,6 +105,11 @@ to run the program write down:
 		- Reverse
 			- Iterative
 
+- Stack
+
+	- Stack Implementation Using Arrays(Static memory allocation)
+	- Stack Implementation Using Linked List(Dynamic memory allocation)
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
