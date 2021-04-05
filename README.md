@@ -110,6 +110,11 @@ to run the program write down:
 	- Stack Implementation Using Arrays(Static memory allocation)
 	- Stack Implementation Using Linked List(Dynamic memory allocation)
 
+	- Applications of Stack Data Structure
+
+		- Infix to Postfix Conversion[Expression]
+		- Infix expression into Prefix expression conversion
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
