@@ -115,6 +115,7 @@ to run the program write down:
 		- Infix to Postfix Conversion[Expression]
 		- Infix expression into Prefix expression conversion
 		- Evaluation of Prefix Expression
+		- Evaluation of Postfix Expression
 
 ## Contributing
 Keep contributing your idea or programs to this project.
