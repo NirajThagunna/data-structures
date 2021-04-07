@@ -117,6 +117,10 @@ to run the program write down:
 		- Evaluation of Prefix Expression
 		- Evaluation of Postfix Expression
 
+- Queue
+
+	- Implementation of the Queue using an Array
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
