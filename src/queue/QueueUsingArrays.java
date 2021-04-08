@@ -189,6 +189,8 @@ public class QueueUsingArrays {
  * dequeue() - O(1)
  * peek() - O(1)
  * display() - O(n)
+ * 
+ * Space Complexity : O(1)
  */
 
 

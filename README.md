@@ -120,6 +120,7 @@ to run the program write down:
 - Queue
 
 	- Implementation of the Queue using an Array
+	- Implementation of the Queue using the Linked List
 
 ## Contributing
 Keep contributing your idea or programs to this project.
