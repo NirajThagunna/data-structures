@@ -122,6 +122,12 @@ to run the program write down:
 	- Implementation of the Queue using an Array
 	- Implementation of the Queue using the Linked List
 
+
+- Interview Preparation Problems
+
+	- Towers of Hanoi -> 3 towers and n-disks
+	- Towers of Hanoi -> 4 towers and n disks
+
 ## Contributing
 Keep contributing your idea or programs to this project.
 
