@@ -121,10 +121,12 @@ to run the program write down:
 
 	- Implementation of the Queue using an Array
 	- Implementation of the Queue using the Linked List
+	- Implementation of the Queue using the Stacks
 
 	- Circular Queue
 
 		- Circular Queue -> Array Implementation
+		- Circular Queue -> Linked List Implementation
 
 
 - Interview Preparation Problems
